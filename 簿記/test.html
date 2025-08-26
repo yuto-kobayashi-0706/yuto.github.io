@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+    .No{
+        border-top: none;
+        border-left: none;
+    }
+    table{
+        border-collapse: collapse;
+        width: 500px;
+        height: 150px;
+    }
+    td{
+        border: solid 2px #000;
+        text-align: center;
+    }
+    button{
+        width: 40px;
+        height: 30px;
+        margin: 5px;
+    }
+    h3{
+        background-color: yellow;
+    }
+</style>
+</head>
+
+<body style="margin-left: 20px;">
+    <h1></h1>
+    <p><h3>問１</h3></p>
+    <p>　<button onclick="random()" style="height: 40px;width: 60px;"></button></p>
+<script>
+    let array = [];
+    function random(){
+        var random = Math.floor(Math.random()*array.length);
+        let randomPages = array[random];
+        window.location.href = randomPages;
+    }
+</script>
+</body>
+
+</html>
