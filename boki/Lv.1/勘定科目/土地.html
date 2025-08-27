@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>Lv.1</title>
+<style>
+    .No{
+        border-top: none;
+        border-left: none;
+    }
+    table{
+        border-collapse: collapse;
+        width: 500px;
+        height: 150px;
+    }
+    td{
+        border: solid 2px #000;
+        text-align: center;
+    }
+    button{
+        width: 40px;
+        height: 30px;
+        margin: 5px;
+    }
+    #yellow{
+        background-color: yellow;
+    }
+</style>
+</head>
+
+<body style="text-align: center;">
+    <h1 id="yellow">勘定科目　Lv.1</h1>
+    <hr><br>
+    <p><h1>土地</h1></p>
+    <br><hr>
+    <button onclick="answer(1),random()"style="height: 40px;width: 60px;">資産</button>
+    <button onclick="answer(0)"style="height: 40px;width: 60px;">負債</button>
+    <button onclick="answer(0)"style="height: 40px;width: 60px;">純資産</button>
+    <button onclick="answer(0)"style="height: 40px;width: 60px;">収益</button>
+    <button onclick="answer(0)"style="height: 40px;width: 60px;">費用</button><br>
+    <p><button onclick="random()" style="height: 40px;width: 100px;">別の問題へ</button><a href="../../home.html"><button style="height: 40px;width: 100px;">難易度選択へ</button></a></p>
+<script>
+    function answer(x){
+        if(x==1){
+            alert('正解！おめでとう！')
+        }
+        else if(x==0){
+            alert('残念！不正解！')
+        }
+        else{
+            alert('error!')
+        }
+    }
+    let array = ["給料.html","建物.html","現金.html","雑益.html","雑損.html"
+                ,"支払利息.html","資本金.html","車両運搬具.html","借入金.html"
+                ,"受取利息.html","商品.html","水道光熱費.html","貸付金.html"
+                ,"当座預金.html","買掛金.html","売掛金.html","備品.html","普通預金.html",];
+    function random(){
+        var random = Math.floor(Math.random()*array.length);
+        let randomPages = array[random];
+        window.location.href = randomPages;
+    }
+</script>
+</body>
+
+</html>
