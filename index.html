@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+<meta charset="UTF-8">
+<title>難易度選択</title>
+<style>
+    .No{
+        border-top: none;
+        border-left: none;
+    }
+    table{
+        border-collapse: collapse;
+        width: 500px;
+        height: 150px;
+    }
+    td{
+        border: solid 2px #000;
+        text-align: center;
+    }
+    button{
+        width: 40px;
+        height: 30px;
+        margin: 5px;
+    }
+    #yellow{
+        background-color: yellow;
+    }
+    button{
+        height: 80px;
+        width: 120px;
+        font-size: 30pt;
+    }
+</style>
+</head>
+
+<body style="text-align: center;">
+    <h1 id="yellow">勘定科目　難易度選択</h1>
+    <hr><br>
+    <p><button onclick="choice(0)">Lv.1</button>
+    <button onclick="choice(1)">Lv.2</button>
+    <button onclick="choice(2)">Lv.3</button></p>
+    <br><hr>
+<script>
+    let array = ["/テスト対策_プロトタイプ/簿記/Lv.1/Lv.1.html","/テスト対策_プロトタイプ/簿記/Lv.2/Lv.2.html","/テスト対策_プロトタイプ/簿記/Lv.3/Lv.3.html"];
+    function choice(x){
+        let showPages = array[x];
+        window.location.href = showPages;
+    }
+</script>
+</body>
+
+</html>
